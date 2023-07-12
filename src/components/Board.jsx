@@ -4,20 +4,27 @@ import Square from './Square'
 const Board = () =>
 {
     const [squares, setSquares] = useState(Array(9).fill(null)); 
+    const [isXNext, setIsXnext]= useState(false);
 
     const handleSquare= position =>{
+
+        if(squares[position])
+        {
+            return;
+        }
     setSquares(currentSquares =>
         {
             return currentSquares.map((squareValue,pos) =>
             {
                 if(position === pos)
                 {
-                    return 'X';
+                    return isXNext ?'X': 'O ';
                 }
                 return squareValue;
             });
         });
-          
+        setIsXnext((currentIsXNext)=> !currentIsXNext)
+           
     };
     const renderSquare = position  =>
     {
