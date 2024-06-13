@@ -3,13 +3,13 @@ const {squares, isXNext}= gamingBoard;
     
     const noMoves= squares.every(squareValue => squareValue !== null);
 
-    const statusMessage  = isXNext ? 'X' : 'O';
+    const statusMessage  = isXNext ? 'X' : 'O'
    
     
     
     const renderStatusMessage = () => {
         if(winner) {
-            return <>Winner is {winner}</>
+            return <><h1>Winner is {winner}</h1></>
         }
         if(!winner && noMoves)
         {
