@@ -7,7 +7,7 @@ return (
         (
         <li key ={index}>
         <button type="button" className={`btn-move ${currentMove === index ? 'active' : '' }`} onClick={() => moveTo(index)}> 
-        {index === 0 ? 'New Game':`Go to move  ${index}`}
+        {index === 0 ? 'H I S T O R Y':`Go to move  ${index}`}
         </button>
         </li>
         ))}
